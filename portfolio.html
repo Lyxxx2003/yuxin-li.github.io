@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Art Portfolio</title>
+    <style>
+        /* Basic page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Slider container styling */
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        /* Flex container for slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Each slide takes full width of the container */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Navigation arrow buttons */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <!-- Replace the image file names with your actual image names -->
+            <div class="slide">
+                <img src="images/art1.jpg" alt="Art 1">
+            </div>
+            <div class="slide">
+                <img src="images/art2.jpg" alt="Art 2">
+            </div>
+            <div class="slide">
+                <img src="images/art3.jpg" alt="Art 3">
+            </div>
+            <div class="slide">
+                <img src="images/art4.jpg" alt="Art 1">
+            </div>
+            <div class="slide">
+                <img src="images/art5.jpg" alt="Art 2">
+            </div>
+            <div class="slide">
+                <img src="images/art6.jpg" alt="Art 3">
+            </div>
+            <div class="slide">
+                <img src="images/art7.jpg" alt="Art 1">
+            </div>
+            <div class="slide">
+                <img src="images/art8.jpg" alt="Art 2">
+            </div>
+            <div class="slide">
+                <img src="images/art9.jpg" alt="Art 3">
+            </div>
+            <div class="slide">
+                <img src="images/art10.jpg" alt="Art 1">
+            </div>
+            <div class="slide">
+                <img src="images/art11.jpg" alt="Art 2">
+            </div>
+            <div class="slide">
+                <img src="images/art12.jpg" alt="Art 3">
+            </div>
+            <div class="slide">
+                <img src="images/art13.jpg" alt="Art 1">
+            </div>
+            <div class="slide">
+                <img src="images/art14.jpg" alt="Art 2">
+            </div>
+            <div class="slide">
+                <img src="images/art15.jpg" alt="Art 3">
+            </div>
+            <div class="slide">
+                <img src="images/art16.jpg" alt="Art 1">
+            </div>
+            <div class="slide">
+                <img src="images/art17.jpg" alt="Art 2">
+            </div>
+            <div class="slide">
+                <img src="images/art18.jpg" alt="Art 3">
+            </div>
+            <div class="slide">
+                <img src="images/art19.jpg" alt="Art 1">
+              </div>
+              <div class="slide">
+                <img src="images/art20.jpg" alt="Art 2">
+              </div>
+              <div class="slide">
+                <img src="images/art21.jpg" alt="Art 3">
+              </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- Navigation arrows -->
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+        // JavaScript to handle slide navigation
+        let currentSlide = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function showSlide(index) {
+            slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+    </script>
+
+</body>
+
+</html>
