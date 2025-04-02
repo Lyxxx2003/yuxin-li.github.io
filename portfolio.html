@@ -3,36 +3,36 @@ layout: layout
 ---
 
 <div class="slider">
-  <div class="slides">
-    {% for i in (1..21) %}
-      <div class="slide"><img src="images/art{{ i }}.jpg" alt="Art {{ i }}"></div>
-    {% endfor %}
-  </div>
-  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
-  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    <div class="slides">
+        {% for i in (1..21) %}
+        <div class="slide"><img src="images/art{{ i }}.jpg" alt="Art {{ i }}"></div>
+        {% endfor %}
+    </div>
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
 </div>
 
 <script>
-  let currentSlide = 0;
-  const slides = document.querySelector('.slides');
-  const totalSlides = document.querySelectorAll('.slide').length;
+    let currentSlide = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
 
-  function showSlide(index) {
-    slides.style.transform = 'translateX(' + (-index * 100) + '%)';
-  }
+    function showSlide(index) {
+        slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-  }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') nextSlide();
-    if (e.key === 'ArrowLeft') prevSlide();
-  });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
 </script>
