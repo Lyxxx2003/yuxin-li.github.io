@@ -177,11 +177,13 @@ ul li a {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    transform: scale(1);
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .gallery-item img {
@@ -189,6 +191,11 @@ ul li a {
     height: 300px;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
 
 .overlay {
@@ -197,12 +204,13 @@ ul li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 20px;
 }
 
 .gallery-item:hover .overlay {
@@ -212,19 +220,73 @@ ul li a {
 .overlay-content {
     text-align: center;
     color: white;
-    padding: 1rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay-content {
+    transform: translateY(0);
 }
 
 .overlay-content h3 {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .overlay-content p {
     margin: 0.5rem 0 0;
     font-size: 1rem;
     opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
+
+/* Animation for gallery section headers */
+.gallery-section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.gallery-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.gallery-section:hover h2::after {
+    width: 100%;
+}
+
+/* Fade-in animation for gallery items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
 
 @media (max-width: 768px) {
     .gallery-grid {
