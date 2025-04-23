@@ -1,0 +1,77 @@
+---
+layout: layout
+title: Traveling
+---
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">My Travel Journey</h1>
+    <div id="map" style="height: 600px; width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"></div>
+</div>
+
+<script>
+    function initMap() {
+        // Create a map centered at a default location
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 2,
+            center: { lat: 20, lng: 0 },
+            styles: [
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{ "color": "#7c93a3" }]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{ "visibility": "off" }]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [{ "color": "#f2f2f2" }]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{ "color": "#7dcdcd" }]
+                }
+            ]
+        });
+
+        // Array of places with their coordinates and info
+        const places = [
+            {
+                position: { lat: 40.7128, lng: -74.0060 },
+                title: "New York City",
+                content: "Visited in 2023. Loved the vibrant city life and amazing food scene!"
+            },
+            // Add more places here
+        ];
+
+        // Create markers for each place
+        places.forEach(place => {
+            const marker = new google.maps.Marker({
+                position: place.position,
+                map: map,
+                title: place.title
+            });
+
+            // Create info window for each marker
+            const infoWindow = new google.maps.InfoWindow({
+                content: `<div style="padding: 10px;">
+                    <h3 style="margin: 0 0 10px 0;">${place.title}</h3>
+                    <p style="margin: 0;">${place.content}</p>
+                </div>`
+            });
+
+            // Add click listener to show info window
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+            });
+        });
+    }
+</script>
+
+<!-- Load Google Maps API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6fi8aEvNZynDAVyHiB-1n7fYlY2VCDUY&callback=initMap">
+</script>
