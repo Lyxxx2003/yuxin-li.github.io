@@ -18,10 +18,13 @@ body {
 
 /* Header Section Styles */
 .header-section {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 150px;
     overflow: hidden;
+    z-index: 1000;
 }
 
 .header-image {
@@ -477,7 +480,21 @@ hr {
 }
 
 .row.pink {
-    position: relative;
-    z-index: 2;
-    background-color: rgba(255, 182, 193, 0.9); /* Semi-transparent pink */
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    background-color: lightpink;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Add padding to the main content to account for fixed header */
+.container {
+    padding-top: 200px; /* 150px for header + 50px for navbar */
+}
+
+/* Ensure the traveling page map has proper spacing */
+#map {
+    margin-top: 20px;
 }
