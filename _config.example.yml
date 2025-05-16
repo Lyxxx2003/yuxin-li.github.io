@@ -1,0 +1,6 @@
+# Site settings
+title: Your Name
+description: Your website description
+
+# Google Maps API Key
+google_maps_api_key: "YOUR_API_KEY_HERE" 
