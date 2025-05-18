@@ -42,43 +42,53 @@ title: Traveling
         const places = [
             {
                 position: { lat: 35.8617, lng: 104.1954 },
-                title: "China"
+                title: "China",
+                color: "#FF0000"  // Red
             },
             {
                 position: { lat: 55.3781, lng: -3.4360 },
-                title: "United Kingdom"
+                title: "United Kingdom",
+                color: "#0000FF"  // Blue
             },
             {
                 position: { lat: 46.8182, lng: 8.2275 },
-                title: "Switzerland"
+                title: "Switzerland",
+                color: "#FF0000"  // Red
             },
             {
                 position: { lat: 40.4637, lng: -3.7492 },
-                title: "Spain"
+                title: "Spain",
+                color: "#FFA500"  // Orange
             },
             {
                 position: { lat: 52.1326, lng: 5.2913 },
-                title: "Netherlands"
+                title: "Netherlands",
+                color: "#FFA500"  // Orange
             },
             {
                 position: { lat: 1.3521, lng: 103.8198 },
-                title: "Singapore"
+                title: "Singapore",
+                color: "#FF0000"  // Red
             },
             {
                 position: { lat: 15.8700, lng: 100.9925 },
-                title: "Thailand"
+                title: "Thailand",
+                color: "#FF0000"  // Red
             },
             {
                 position: { lat: 4.2105, lng: 101.9758 },
-                title: "Malaysia"
+                title: "Malaysia",
+                color: "#FF0000"  // Red
             },
             {
                 position: { lat: 21.1619, lng: -86.8515 },
-                title: "Cancun"
+                title: "Cancun",
+                color: "#008000"  // Green
             },
             {
                 position: { lat: 61.5240, lng: 105.3188 },
-                title: "Russia"
+                title: "Russia",
+                color: "#0000FF"  // Blue
             }
         ];
 
@@ -87,14 +97,23 @@ title: Traveling
             const marker = new google.maps.Marker({
                 position: place.position,
                 map: map,
-                title: place.title
+                title: place.title,
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 8,
+                    fillColor: place.color,
+                    fillOpacity: 1,
+                    strokeColor: '#FFFFFF',
+                    strokeWeight: 2
+                }
             });
 
             // Create info window for each marker
             const infoWindow = new google.maps.InfoWindow({
-                content: `<div style="padding: 3px;">
-                    <h4 style="margin: 0; font-size: 14px;">${place.title}</h4>
-                </div>`
+                content: `<div style="padding: 3px; background-color: ${place.color}; color: white; border-radius: 4px; font-size: 12px; text-align: center;">
+                    ${place.title}
+                </div>`,
+                maxWidth: 150
             });
 
             // Add click listener to show info window
