@@ -92,14 +92,18 @@ title: Traveling
 
             // Create info window for each marker
             const infoWindow = new google.maps.InfoWindow({
-                content: `<div style="padding: 5px;">
-                    <h3 style="margin: 0;">${place.title}</h3>
+                content: `<div style="padding: 3px;">
+                    <h4 style="margin: 0; font-size: 14px;">${place.title}</h4>
                 </div>`
             });
 
             // Add click listener to show info window
             marker.addListener("click", () => {
                 infoWindow.open(map, marker);
+                // Auto close after 2 seconds
+                setTimeout(() => {
+                    infoWindow.close();
+                }, 2000);
             });
         });
     }
