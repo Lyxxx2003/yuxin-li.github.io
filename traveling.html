@@ -41,11 +41,45 @@ title: Traveling
         // Array of places with their coordinates and info
         const places = [
             {
-                position: { lat: 40.7128, lng: -74.0060 },
-                title: "New York City",
-                content: "Visited in 2023. Loved the vibrant city life and amazing food scene!"
+                position: { lat: 35.8617, lng: 104.1954 },
+                title: "China"
             },
-            // Add more places here
+            {
+                position: { lat: 55.3781, lng: -3.4360 },
+                title: "United Kingdom"
+            },
+            {
+                position: { lat: 46.8182, lng: 8.2275 },
+                title: "Switzerland"
+            },
+            {
+                position: { lat: 40.4637, lng: -3.7492 },
+                title: "Spain"
+            },
+            {
+                position: { lat: 52.1326, lng: 5.2913 },
+                title: "Netherlands"
+            },
+            {
+                position: { lat: 1.3521, lng: 103.8198 },
+                title: "Singapore"
+            },
+            {
+                position: { lat: 15.8700, lng: 100.9925 },
+                title: "Thailand"
+            },
+            {
+                position: { lat: 4.2105, lng: 101.9758 },
+                title: "Malaysia"
+            },
+            {
+                position: { lat: 21.1619, lng: -86.8515 },
+                title: "Cancun"
+            },
+            {
+                position: { lat: 61.5240, lng: 105.3188 },
+                title: "Russia"
+            }
         ];
 
         // Create markers for each place
@@ -58,9 +92,8 @@ title: Traveling
 
             // Create info window for each marker
             const infoWindow = new google.maps.InfoWindow({
-                content: `<div style="padding: 10px;">
-                    <h3 style="margin: 0 0 10px 0;">${place.title}</h3>
-                    <p style="margin: 0;">${place.content}</p>
+                content: `<div style="padding: 5px;">
+                    <h3 style="margin: 0;">${place.title}</h3>
                 </div>`
             });
 
