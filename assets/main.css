@@ -416,17 +416,17 @@ ul li a:hover {
     margin: 0;
 }
 
-.about-me-section .col-md-6:first-child {
+.about-me-section .col-md-4 {
     position: relative;
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
     padding-right: 2rem;
     height: fit-content;
 }
 
-.about-me-section .col-md-6:last-child {
-    flex: 0 0 50%;
-    max-width: 50%;
+.about-me-section .col-md-8 {
+    flex: 0 0 66.67%;
+    max-width: 66.67%;
     height: 420px; /* Fixed height roughly matching profile image + social icons + some extra */
     overflow-y: auto;
     padding-left: 2rem;
@@ -435,21 +435,21 @@ ul li a:hover {
 }
 
 /* Custom scrollbar for webkit browsers */
-.about-me-section .col-md-6:last-child::-webkit-scrollbar {
+.about-me-section .col-md-8::-webkit-scrollbar {
     width: 8px;
 }
 
-.about-me-section .col-md-6:last-child::-webkit-scrollbar-track {
+.about-me-section .col-md-8::-webkit-scrollbar-track {
     background: #E6F3FF;
     border-radius: 4px;
 }
 
-.about-me-section .col-md-6:last-child::-webkit-scrollbar-thumb {
+.about-me-section .col-md-8::-webkit-scrollbar-thumb {
     background: #1E3A8A;
     border-radius: 4px;
 }
 
-.about-me-section .col-md-6:last-child::-webkit-scrollbar-thumb:hover {
+.about-me-section .col-md-8::-webkit-scrollbar-thumb:hover {
     background: #2563EB;
 }
 
@@ -460,8 +460,8 @@ ul li a:hover {
         min-height: auto;
     }
     
-    .about-me-section .col-md-6:first-child,
-    .about-me-section .col-md-6:last-child {
+    .about-me-section .col-md-4,
+    .about-me-section .col-md-8 {
         flex: 1 1 auto;
         max-width: 100%;
         height: auto;
@@ -471,7 +471,7 @@ ul li a:hover {
 }
 
 .profile-image {
-    margin-left: 50px; /* Reduce margin since image is smaller */
+    margin-left: 20px; /* Reduce margin further for narrower column */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -486,7 +486,7 @@ ul li a:hover {
     gap: 20px;
     margin-top: 20px;
     padding-bottom: 20px;
-    margin-left: 50px; /* Match the profile image margin */
+    margin-left: 20px; /* Match the profile image margin */
 }
 
 .social-links a {
