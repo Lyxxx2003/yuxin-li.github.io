@@ -407,7 +407,7 @@ ul li a:hover {
 .about-me-section {
     padding: 2rem;
     margin-top: 0; /* No margin since header is not fixed */
-    min-height: calc(100vh - 200px); /* Minimum height for viewport */
+    min-height: calc(100vh - 220px); /* Minimum height for viewport */
 }
 
 .about-me-section .row {
