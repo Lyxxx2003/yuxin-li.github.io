@@ -408,7 +408,7 @@ ul li a:hover {
     padding: 2rem;
     margin-top: 0; /* No margin since header is not fixed */
     height: 420px; /* Fixed height instead of min-height to ensure footer visibility */
-    margin-bottom: 2rem; /* Add margin to ensure space for footer */
+    margin-bottom: 0.5rem; /* Minimal margin to not take space from about-me */
 }
 
 .about-me-section .row {
@@ -427,7 +427,6 @@ ul li a:hover {
     flex-direction: column;
     align-items: center; /* Center content horizontally */
     justify-content: flex-start;
-    border-right: 1px solid rgba(30, 58, 138, 0.1); /* Subtle separator */
 }
 
 .about-me-section .col-md-8 {
@@ -477,7 +476,6 @@ ul li a:hover {
         height: auto;
         overflow-y: visible;
         padding: 1rem;
-        border-right: none; /* Remove border on mobile */
     }
 }
 
@@ -603,11 +601,8 @@ hr {
 
 /* Footer Styles */
 footer {
-    margin-top: 2rem;
-    padding: 1rem 0;
+    margin-top: 1rem;
     text-align: center;
-    background-color: rgba(30, 58, 138, 0.05);
-    border-top: 1px solid rgba(30, 58, 138, 0.1);
 }
 
 footer p {
