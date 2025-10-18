@@ -20,13 +20,13 @@ body {
 
 /* Header Section Styles */
 .header-section {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 150px;
     overflow: hidden;
-    z-index: 999;
+    z-index: 1;
     box-shadow: 0 4px 20px rgba(30, 58, 138, 0.2);
 }
 
@@ -34,7 +34,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 70%; /* Try 70% to find the sea area */
+    object-position: center 25%; /* Show the mountain area - 3/4 portion in middle */
     filter: brightness(1.1) contrast(1.2) saturate(1.3) hue-rotate(5deg);
     opacity: 0.95;
     transition: all 0.3s ease;
@@ -91,13 +91,12 @@ body {
 .blue {
     background-color: #1E3A8A; /* Darker blue nav bar */
     padding: 10px 0;
-    position: fixed;
-    top: 150px;
+    position: relative;
     left: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     margin: 0;
-    z-index: 1000;
+    z-index: 2;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -407,13 +406,13 @@ ul li a:hover {
 /* Index Page Styles */
 .about-me-section {
     padding: 2rem;
-    margin-top: 200px; /* Account for fixed header and nav */
+    margin-top: 0; /* No margin since header is not fixed */
     min-height: calc(100vh - 200px); /* Minimum height for viewport */
 }
 
 .about-me-section .row {
     display: flex;
-    min-height: calc(100vh - 240px); /* Account for padding */
+    min-height: calc(100vh - 300px); /* Account for header and nav */
     margin: 0;
 }
 
@@ -422,12 +421,13 @@ ul li a:hover {
     flex: 0 0 50%;
     max-width: 50%;
     padding-right: 2rem;
+    height: fit-content; /* Let it size to content */
 }
 
 .about-me-section .col-md-6:last-child {
     flex: 0 0 50%;
     max-width: 50%;
-    height: calc(100vh - 240px);
+    height: calc(100vh - 300px); /* Account for header + nav + padding */
     overflow-y: auto;
     padding-left: 2rem;
     scrollbar-width: thin;
@@ -584,9 +584,9 @@ hr {
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-/* Main content padding for fixed header and nav */
+/* Main content - no padding needed since header is not fixed */
 .container {
-    padding-top: 200px; /* 150px for header + 50px for navbar */
+    padding-top: 0;
 }
 
 /* Ensure the traveling page map has proper spacing */
