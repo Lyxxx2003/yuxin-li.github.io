@@ -407,7 +407,7 @@ ul li a:hover {
 .about-me-section {
     padding: 2rem;
     margin-top: 0; /* No margin since header is not fixed */
-    min-height: 60vh; /* Further reduce to ensure footer is visible */
+    height: 420px; /* Fixed height instead of min-height to ensure footer visibility */
     margin-bottom: 2rem; /* Add margin to ensure space for footer */
 }
 
@@ -421,19 +421,21 @@ ul li a:hover {
     position: relative;
     flex: 0 0 33.33%;
     max-width: 33.33%;
-    padding-right: 2rem;
+    padding: 0 1rem; /* Equal padding on both sides */
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
+    justify-content: flex-start;
+    border-right: 1px solid rgba(30, 58, 138, 0.1); /* Subtle separator */
 }
 
 .about-me-section .col-md-8 {
     flex: 0 0 66.67%;
     max-width: 66.67%;
-    height: 420px; /* Fixed height roughly matching profile image + social icons + some extra */
+    height: 380px; /* Slightly reduce height to match the section height */
     overflow-y: auto;
-    padding-left: 2rem;
+    padding: 0 1rem; /* Equal padding on both sides */
     scrollbar-width: thin;
     scrollbar-color: #1E3A8A #E6F3FF;
 }
@@ -459,6 +461,10 @@ ul li a:hover {
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
+    .about-me-section {
+        height: auto; /* Remove fixed height on mobile */
+    }
+    
     .about-me-section .row {
         flex-direction: column;
         min-height: auto;
@@ -471,6 +477,7 @@ ul li a:hover {
         height: auto;
         overflow-y: visible;
         padding: 1rem;
+        border-right: none; /* Remove border on mobile */
     }
 }
 
