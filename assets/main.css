@@ -407,7 +407,7 @@ ul li a:hover {
 .about-me-section {
     padding: 2rem;
     margin-top: 0; /* No margin since header is not fixed */
-    height: 420px; /* Fixed height instead of min-height to ensure footer visibility */
+    height: 350px; /* Shorter height so footer can be displayed */
     margin-bottom: 0.5rem; /* Minimal margin to not take space from about-me */
 }
 
@@ -432,7 +432,7 @@ ul li a:hover {
 .about-me-section .col-md-8 {
     flex: 0 0 66.67%;
     max-width: 66.67%;
-    height: 380px; /* Slightly reduce height to match the section height */
+    height: 310px; /* Reduce to fit within the shorter section */
     overflow-y: auto;
     padding: 0 1rem; /* Equal padding on both sides */
     scrollbar-width: thin;
