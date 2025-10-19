@@ -171,3 +171,49 @@ title: Art Portfolio
     </div>
   </div>
 </div>
+
+<!-- Image Modal for Click-to-Magnify -->
+<div id="imageModal" class="image-modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+  // Image Modal Functionality
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    const closeBtn = document.querySelector('.modal-close');
+
+    // Add click event to all gallery images
+    galleryImages.forEach(img => {
+      img.addEventListener('click', function (e) {
+        e.stopPropagation();
+        modal.classList.add('active');
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      });
+    });
+
+    // Close modal when clicking the X or background
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', closeModal);
+    modalImg.addEventListener('click', function (e) {
+      e.stopPropagation(); // Prevent closing when clicking the image itself
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  });
+</script>
