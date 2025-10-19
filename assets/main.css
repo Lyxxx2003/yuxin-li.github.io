@@ -137,6 +137,7 @@ ul li a:hover {
 
 .profile-image {
     margin-left: 100px;
+    padding-top: 20px;
 }
 
 .heading {
@@ -616,6 +617,7 @@ hr {
 footer {
     margin-top: 1rem;
     text-align: center;
+    padding-bottom: 2px;
 }
 
 footer p {
