@@ -1,0 +1,122 @@
+{
+  "portfolio": {
+    "crochet": [
+      {
+        "id": "crochet-sunflower",
+        "image": "images/crochet1_sunflower.jpg",
+        "title": "Golden Sunflower",
+        "description": "Handcrafted crochet sunflower with intricate petal details",
+        "alt": "Crochet Sunflower"
+      },
+      {
+        "id": "crochet-rose",
+        "image": "images/crochet2_rose.jpg",
+        "title": "Elegant Rose",
+        "description": "Delicate crochet rose with layered petals and realistic texture",
+        "alt": "Crochet Rose"
+      },
+      {
+        "id": "crochet-lily",
+        "image": "images/crochet3_lily.jpg",
+        "title": "Pure Lily",
+        "description": "Graceful crochet lily with flowing petals and elegant form",
+        "alt": "Crochet Lily"
+      }
+    ],
+    "gongbi": [
+      {
+        "id": "gongbi-peacock",
+        "image": "images/gongbi1_peacock.jpg",
+        "title": "Majestic Peacock",
+        "description": "Traditional Gongbi style peacock with detailed feather work",
+        "alt": "Gongbi Peacock"
+      },
+      {
+        "id": "gongbi-duck",
+        "image": "images/gongbi2_duck.jpg",
+        "title": "Serene Duck",
+        "description": "Peaceful duck rendered in classical Gongbi technique",
+        "alt": "Gongbi Duck"
+      },
+      {
+        "id": "gongbi-magnolia",
+        "image": "images/gongbi3_magnolia.jpg",
+        "title": "Blooming Magnolia",
+        "description": "Delicate magnolia blossoms in traditional Gongbi style",
+        "alt": "Gongbi Magnolia"
+      },
+      {
+        "id": "gongbi-lotus",
+        "image": "images/gongbi7_lotus.jpg",
+        "title": "Elegant Lotus",
+        "description": "Graceful lotus flowers in classical Gongbi painting style",
+        "alt": "Gongbi Lotus"
+      },
+      {
+        "id": "gongbi-art4",
+        "image": "images/gongbi4.jpg",
+        "title": "Traditional Beauty",
+        "description": "Classical Gongbi painting with meticulous brushwork",
+        "alt": "Gongbi Art 4"
+      },
+      {
+        "id": "gongbi-art5",
+        "image": "images/gongbi5.jpg",
+        "title": "Elegant Composition",
+        "description": "Refined Gongbi artwork showcasing traditional techniques",
+        "alt": "Gongbi Art 5"
+      },
+      {
+        "id": "gongbi-art6",
+        "image": "images/gongbi6.jpg",
+        "title": "Artistic Harmony",
+        "description": "Balanced Gongbi composition with detailed precision",
+        "alt": "Gongbi Art 6"
+      },
+      {
+        "id": "gongbi-other",
+        "image": "images/other.jpg",
+        "title": "Other Gongbi Work",
+        "description": "Additional Gongbi painting showcasing traditional artistry",
+        "alt": "Other Gongbi Art"
+      }
+    ],
+    "xieyi": [
+      {
+        "id": "xieyi-morning-glory",
+        "image": "images/xieyi1_morning_glory.jpg",
+        "title": "Morning Glory",
+        "description": "Vibrant morning glory flowers in expressive Xieyi style",
+        "alt": "Xieyi Morning Glory"
+      },
+      {
+        "id": "xieyi-forest",
+        "image": "images/xieyi2_forest.jpg",
+        "title": "Mystical Forest",
+        "description": "Atmospheric forest scene with flowing Xieyi brushwork",
+        "alt": "Xieyi Forest"
+      },
+      {
+        "id": "xieyi-bamboo",
+        "image": "images/xieyi3_bamboo.jpg",
+        "title": "Graceful Bamboo",
+        "description": "Elegant bamboo stalks rendered in traditional Xieyi technique",
+        "alt": "Xieyi Bamboo"
+      },
+      {
+        "id": "xieyi-orchid",
+        "image": "images/xieyi4_orchid.jpg",
+        "title": "Delicate Orchid",
+        "description": "Refined orchid blossoms in flowing Xieyi brushwork",
+        "alt": "Xieyi Orchid"
+      },
+      {
+        "id": "xieyi-mountain",
+        "image": "images/xieyi5_mountain.jpg",
+        "title": "Majestic Mountain",
+        "description": "Grand mountain landscape in bold Xieyi style",
+        "alt": "Xieyi Mountain"
+      }
+    ]
+  }
+}

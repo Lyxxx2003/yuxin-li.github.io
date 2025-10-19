@@ -286,8 +286,9 @@ ul li a:hover {
 .gallery-item img {
     width: 100%;
     height: 350px; /* Larger height for better visibility */
-    object-fit: cover;
-    object-position: center center; /* Show the best part of the image */
+    object-fit: contain; /* Show full image instead of cropping */
+    object-position: center center; /* Center the image */
+    background: #f8f9fa; /* Light background in case image doesn't fill container */
     display: block;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer; /* Indicate clickable */
@@ -646,8 +647,10 @@ footer p {
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
