@@ -5,7 +5,6 @@ title: Projects
 
 <div class="projects-container">
     <div class="projects-header">
-        <h1>My Projects</h1>
         <p class="projects-subtitle">Software applications and web solutions I've developed</p>
     </div>
 
@@ -46,4 +45,16 @@ title: Projects
                         </a>
                     </div>
                 </div>
-            `;
+                `;
+
+                projectsContainer.appendChild(projectRow);
+            });
+        } catch (error) {
+            console.error('Error loading projects:', error);
+            document.getElementById('projects-content').innerHTML =
+                '<p class="error-message">Error loading projects. Please try again later.</p>';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProjects);
+</script>

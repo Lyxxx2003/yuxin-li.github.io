@@ -5,7 +5,6 @@ title: Research
 
 <div class="research-container">
     <div class="research-header">
-        <h1>Research</h1>
         <p class="research-subtitle">Academic research in Machine Learning, NLP, and AI systems</p>
     </div>
 
@@ -22,10 +21,10 @@ title: Research
             const researchContainer = document.getElementById('research-content');
 
             data.research.forEach((research, index) => {
-                const researchCard = document.createElement('div');
-                researchCard.className = 'research-card';
+                const researchRow = document.createElement('div');
+                researchRow.className = 'research-row';
 
-                researchCard.innerHTML = `
+                researchRow.innerHTML = `
                 <div class="research-content">
                     <h2 class="research-title">${research.title}</h2>
                     <div class="research-meta">
@@ -48,9 +47,9 @@ title: Research
                         </a>
                     </div>
                 </div>
-            `;
+                `;
 
-                researchContainer.appendChild(researchCard);
+                researchContainer.appendChild(researchRow);
             });
         } catch (error) {
             console.error('Error loading research:', error);

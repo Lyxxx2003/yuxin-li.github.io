@@ -770,25 +770,32 @@ footer p {
     margin: 0;
 }
 
-.research-card {
+/* Research row styling to match projects */
+.research-row {
+    display: flex;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-left: 4px solid #1E3A8A;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+    overflow: hidden;
     transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
 }
 
-.research-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+.research-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.research-content {
+    flex: 1;
+    padding: 2.5rem;
 }
 
 .research-title {
     color: #1E3A8A;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin: 0 0 1rem 0;
     line-height: 1.3;
 }
@@ -803,17 +810,17 @@ footer p {
 .research-year {
     background: #E5E7EB;
     color: #374151;
-    padding: 0.25rem 0.75rem;
+    padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .research-status {
-    padding: 0.25rem 0.75rem;
+    padding: 0.4rem 1rem;
     border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -837,6 +844,7 @@ footer p {
     color: #3B82F6;
     font-style: italic;
     font-weight: 500;
+    font-size: 1rem;
 }
 
 .research-description {
@@ -857,18 +865,20 @@ footer p {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: #F3F4F6;
+    background: #F8FAFC;
     color: #374151;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
+    border-radius: 10px;
+    font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid #E5E7EB;
+    font-size: 0.95rem;
 }
 
 .research-link:hover {
     text-decoration: none;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .research-link.github-link:hover {
@@ -915,12 +925,17 @@ footer p {
         font-size: 2.5rem;
     }
     
-    .research-card {
-        padding: 1.5rem;
+    .research-row {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    
+    .research-content {
+        padding: 2rem;
     }
     
     .research-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     
     .research-meta {
