@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": "humor-project",
+      "title": "Humor Project",
+      "type": "iOS Application",
+      "description": "An innovative iOS application designed to bring joy and laughter to users' daily lives. Features a curated collection of humor content, interactive elements, and social sharing capabilities. Built with modern iOS development practices and user-centered design principles.",
+      "image": "images/humor-project.jpg",
+      "skills": ["Swift", "UIKit", "Core Data", "REST APIs", "Xcode"],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
+      "id": "quizzbee",
+      "title": "QuizzBee",
+      "type": "iOS Application", 
+      "description": "An engaging quiz application for iOS that challenges users with various categories of questions. Features include real-time scoring, multiple difficulty levels, progress tracking, and social leaderboards. Designed with an intuitive interface for seamless user experience.",
+      "image": "images/quizzbee.jpg",
+      "skills": ["Swift", "SwiftUI", "Firebase", "Game Center", "JSON APIs"],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
+      "id": "cafecraft",
+      "title": "CafeCraft",
+      "type": "Web Application",
+      "description": "A comprehensive web platform for coffee enthusiasts and cafe owners. Features include cafe discovery, coffee bean information, brewing guides, and community reviews. Built with modern web technologies and responsive design for optimal experience across all devices.",
+      "image": "images/cafecraft.jpg", 
+      "skills": ["React", "Node.js", "MongoDB", "Express.js", "CSS3"],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
+      "id": "gardening-app",
+      "title": "Gardening App",
+      "type": "Web Application",
+      "description": "A digital gardening companion that helps users plan, track, and maintain their gardens. Features plant care reminders, seasonal planting guides, weather integration, and a community forum for sharing gardening tips and experiences.",
+      "image": "images/gardening-app.jpg",
+      "skills": ["JavaScript", "HTML5", "CSS3", "Weather API", "Local Storage"],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
+      "id": "eventrecommender",
+      "title": "EventRecommender", 
+      "type": "Web Application",
+      "description": "An intelligent event discovery platform that recommends personalized events based on user preferences, location, and past attendance history. Features machine learning algorithms for smart recommendations and integration with popular event platforms.",
+      "image": "images/eventrecommender.jpg",
+      "skills": ["Python", "Flask", "Machine Learning", "PostgreSQL", "RESTful APIs"],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    }
+  ]
+}

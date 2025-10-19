@@ -1,0 +1,64 @@
+---
+layout: layout
+title: Research
+---
+
+<div class="research-container">
+    <div class="research-header">
+        <h1>Research</h1>
+        <p class="research-subtitle">Academic research in Machine Learning, NLP, and AI systems</p>
+    </div>
+
+    <div id="research-content">
+        <!-- Research projects will be loaded here dynamically -->
+    </div>
+</div>
+
+<script>
+    async function loadResearch() {
+        try {
+            const response = await fetch('data/research.json');
+            const data = await response.json();
+            const researchContainer = document.getElementById('research-content');
+
+            data.research.forEach((research, index) => {
+                const researchCard = document.createElement('div');
+                researchCard.className = 'research-card';
+
+                researchCard.innerHTML = `
+                <div class="research-content">
+                    <h2 class="research-title">${research.title}</h2>
+                    <div class="research-meta">
+                        <span class="research-year">${research.year}</span>
+                        <span class="research-status status-${research.status.toLowerCase().replace(' ', '-')}">${research.status}</span>
+                    </div>
+                    <div class="research-keywords">
+                        ${research.keywords.map(keyword => `<em class="keyword">${keyword}</em>`).join(', ')}
+                    </div>
+                    <p class="research-description">${research.description}</p>
+                    <div class="research-links">
+                        <a href="${research.links.github}" class="research-link github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="${research.links.publication}" class="research-link publication-link">
+                            <i class="fas fa-file-alt"></i> Publication
+                        </a>
+                        <a href="${research.links.arxiv}" class="research-link arxiv-link">
+                            <i class="fas fa-external-link-alt"></i> arXiv
+                        </a>
+                    </div>
+                </div>
+            `;
+
+                researchContainer.appendChild(researchCard);
+            });
+        } catch (error) {
+            console.error('Error loading research:', error);
+            document.getElementById('research-content').innerHTML =
+                '<p class="error-message">Error loading research. Please try again later.</p>';
+        }
+    }
+
+    // Load research when the page loads
+    document.addEventListener('DOMContentLoaded', loadResearch);
+</script>

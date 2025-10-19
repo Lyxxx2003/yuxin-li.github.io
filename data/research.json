@@ -1,0 +1,43 @@
+{
+  "research": [
+    {
+      "id": "chinese-lyrics-llm",
+      "title": "Comparative Study of LLM Zero-shot and Domain-specific Fine-tuning on Chinese Lyrics",
+      "keywords": ["Large Language Models", "Fine-tuning", "Chinese NLP", "Zero-shot Learning", "Music Analysis"],
+      "description": "This research investigates the effectiveness of different LLM approaches for processing Chinese lyrics, comparing zero-shot performance with domain-specific fine-tuning. The study analyzes various linguistic patterns, cultural nuances, and semantic structures unique to Chinese lyrical content, providing insights into optimal model adaptation strategies for creative text analysis.",
+      "status": "In Progress",
+      "year": "2024",
+      "links": {
+        "github": "#",
+        "publication": "#",
+        "arxiv": "#"
+      }
+    },
+    {
+      "id": "medical-overdose-prediction",
+      "title": "Using LLM for Medical Overdose Prediction",
+      "keywords": ["Medical AI", "Overdose Prevention", "Predictive Modeling", "Healthcare Analytics", "Clinical Decision Support"],
+      "description": "This study explores the application of Large Language Models in predicting and preventing medical overdoses. By analyzing patient data, prescription patterns, and clinical notes, the research aims to develop an early warning system that can assist healthcare providers in identifying high-risk patients and implementing preventive measures.",
+      "status": "Completed",
+      "year": "2024",
+      "links": {
+        "github": "#",
+        "publication": "#",
+        "arxiv": "#"
+      }
+    },
+    {
+      "id": "self-supervised-recommender",
+      "title": "Self-supervised Learning in Large-scale Recommender Systems",
+      "keywords": ["Self-supervised Learning", "Recommender Systems", "Deep Learning", "User Behavior", "Scalability"],
+      "description": "This research focuses on implementing self-supervised learning techniques to improve large-scale recommender systems. The study addresses challenges in data sparsity, cold start problems, and scalability while developing novel approaches to learn meaningful user and item representations without explicit supervision.",
+      "status": "In Progress", 
+      "year": "2024",
+      "links": {
+        "github": "#",
+        "publication": "#",
+        "arxiv": "#"
+      }
+    }
+  ]
+}
