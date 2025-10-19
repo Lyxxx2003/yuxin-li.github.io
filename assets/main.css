@@ -437,6 +437,7 @@ ul li a:hover {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     min-height: 60vh;
+    padding-top: 1px;
     padding: 0 1rem; /* Equal padding on both sides */
     height: fit-content;
     display: flex;
@@ -677,7 +678,74 @@ footer p {
     color: #ddd;
 }
 
-/* Ensure the traveling page map has proper spacing */
+/* Traveling Page Styles */
+.traveling-container {
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: calc(100vh - 200px); /* Account for header and nav */
+    display: flex;
+    flex-direction: column;
+}
+
+.traveling-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.traveling-header h1 {
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    margin-bottom: 0.5rem;
+}
+
+.traveling-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}
+
+.map-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0; /* Important for flex child to shrink */
+}
+
+.world-map {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(30, 58, 138, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.world-map:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for traveling page */
+@media (max-width: 768px) {
+    .traveling-container {
+        padding: 0.5rem;
+        height: calc(100vh - 180px);
+    }
+    
+    .traveling-header h1 {
+        font-size: 2rem;
+    }
+    
+    .traveling-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Legacy map styles for backward compatibility */
 #map {
     margin-top: 20px;
 }
