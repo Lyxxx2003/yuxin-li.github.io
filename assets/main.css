@@ -885,22 +885,40 @@ footer p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.research-link.github-link:hover {
+.research-link.github-research-link:hover {
     background: #24292e;
     color: white;
     border-color: #24292e;
 }
 
-.research-link.publication-link:hover {
+.research-link.publication-research-link:hover {
     background: #1E3A8A;
     color: white;
     border-color: #1E3A8A;
 }
 
-.research-link.arxiv-link:hover {
+.research-link.arxiv-research-link:hover {
     background: #B91C1C;
     color: white;
     border-color: #B91C1C;
+}
+
+.research-link.general-research-link:hover {
+    background: #059669;
+    color: white;
+    border-color: #059669;
+}
+
+.research-link.paper-research-link:hover {
+    background: #DC2626;
+    color: white;
+    border-color: #DC2626;
+}
+
+.research-link.demo-research-link:hover {
+    background: #7C3AED;
+    color: white;
+    border-color: #7C3AED;
 }
 
 .research-link i {
@@ -1038,11 +1056,26 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
+.project-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: #1E3A8A;
+    font-weight: 600;
+    background-color: rgba(30, 58, 138, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
 .project-type {
     font-size: 1rem;
     color: #3B82F6;
     font-weight: 600;
-    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1115,6 +1148,58 @@ footer p {
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.general-link {
+    background-color: transparent;
+    color: #059669;
+    border-color: #059669;
+}
+
+.general-link:hover {
+    background-color: #059669;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.ios-link {
+    background-color: transparent;
+    color: #6B7280;
+    border-color: #6B7280;
+}
+
+.ios-link:hover {
+    background-color: #6B7280;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+.web-link {
+    background-color: transparent;
+    color: #DC2626;
+    border-color: #DC2626;
+}
+
+.web-link:hover {
+    background-color: #DC2626;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.video-link {
+    background-color: transparent;
+    color: #DC2626;
+    border-color: #DC2626;
+}
+
+.video-link:hover {
+    background-color: #DC2626;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
 /* Responsive design for projects */

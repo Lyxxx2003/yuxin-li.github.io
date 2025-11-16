@@ -6,11 +6,11 @@
       "keywords": ["Large Language Models", "Fine-tuning", "Chinese NLP", "Zero-shot Learning", "Music Analysis"],
       "description": "This research investigates the effectiveness of different LLM approaches for processing Chinese lyrics, comparing zero-shot performance with domain-specific fine-tuning. The study analyzes various linguistic patterns, cultural nuances, and semantic structures unique to Chinese lyrical content, providing insights into optimal model adaptation strategies for creative text analysis.",
       "status": "In Progress",
-      "year": "2024",
+      "year": "2025",
       "links": {
-        "github": "#",
-        "publication": "#",
-        "arxiv": "#"
+        "github": "https://github.com/Lyxxx2003/s25-llm-project",
+        "publication": "TBD",
+        "arxiv": "TBD"
       }
     },
     {
@@ -18,12 +18,11 @@
       "title": "Using LLM for Medical Overdose Prediction",
       "keywords": ["Medical AI", "Overdose Prevention", "Predictive Modeling", "Healthcare Analytics", "Clinical Decision Support"],
       "description": "This study explores the application of Large Language Models in predicting and preventing medical overdoses. By analyzing patient data, prescription patterns, and clinical notes, the research aims to develop an early warning system that can assist healthcare providers in identifying high-risk patients and implementing preventive measures.",
-      "status": "Completed",
-      "year": "2024",
+      "status": "In Progress",
+      "year": "2024-2025",
       "links": {
-        "github": "#",
-        "publication": "#",
-        "arxiv": "#"
+        "publication": "TBD",
+        "arxiv": "TBD"
       }
     },
     {
@@ -31,12 +30,11 @@
       "title": "Self-supervised Learning in Large-scale Recommender Systems",
       "keywords": ["Self-supervised Learning", "Recommender Systems", "Deep Learning", "User Behavior", "Scalability"],
       "description": "This research focuses on implementing self-supervised learning techniques to improve large-scale recommender systems. The study addresses challenges in data sparsity, cold start problems, and scalability while developing novel approaches to learn meaningful user and item representations without explicit supervision.",
-      "status": "In Progress", 
-      "year": "2024",
+      "status": "Finished", 
+      "year": "2023",
       "links": {
-        "github": "#",
-        "publication": "#",
-        "arxiv": "#"
+        "publication": "https://www.ewadirect.com/proceedings/tns/article/view/8370",
+        "arxiv": "TBD"
       }
     }
   ]

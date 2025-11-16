@@ -14,13 +14,59 @@ title: Research
 </div>
 
 <script>
+    function generateResearchLinks(links) {
+        let linksHtml = '';
+        if (links && Object.keys(links).length > 0) {
+            Object.entries(links).forEach(([linkText, url]) => {
+                if (url && url !== '' && url !== 'TBD') {
+                    // Determine icon and style based on link text
+                    let icon = 'fas fa-external-link-alt'; // default icon
+                    let linkClass = 'research-link general-research-link';
+                    
+                    if (linkText.toLowerCase().includes('github')) {
+                        icon = 'fab fa-github';
+                        linkClass = 'research-link github-research-link';
+                    } else if (linkText.toLowerCase().includes('publication')) {
+                        icon = 'fas fa-file-alt';
+                        linkClass = 'research-link publication-research-link';
+                    } else if (linkText.toLowerCase().includes('arxiv')) {
+                        icon = 'fas fa-external-link-alt';
+                        linkClass = 'research-link arxiv-research-link';
+                    } else if (linkText.toLowerCase().includes('paper') || linkText.toLowerCase().includes('pdf')) {
+                        icon = 'fas fa-file-pdf';
+                        linkClass = 'research-link paper-research-link';
+                    } else if (linkText.toLowerCase().includes('demo') || linkText.toLowerCase().includes('live')) {
+                        icon = 'fas fa-external-link-alt';
+                        linkClass = 'research-link demo-research-link';
+                    }
+                    
+                    linksHtml += `<a href="${url}" class="${linkClass}" target="_blank"><i class="${icon}"></i> ${linkText}</a>`;
+                }
+            });
+        }
+        return linksHtml;
+    }
+
     async function loadResearch() {
         try {
             const response = await fetch('data/research.json');
             const data = await response.json();
             const researchContainer = document.getElementById('research-content');
 
-            data.research.forEach((research, index) => {
+            // Sort research by year (newest first)
+            const sortedResearch = data.research.sort((a, b) => {
+                // Handle year ranges like "2024-2025"
+                const getLatestYear = (yearStr) => {
+                    const years = yearStr.toString().match(/\d{4}/g);
+                    return years ? Math.max(...years.map(y => parseInt(y))) : 0;
+                };
+                
+                const yearA = getLatestYear(a.year);
+                const yearB = getLatestYear(b.year);
+                return yearB - yearA; // Newest first
+            });
+
+            sortedResearch.forEach((research, index) => {
                 const researchRow = document.createElement('div');
                 researchRow.className = 'research-row';
 
@@ -36,15 +82,7 @@ title: Research
                     </div>
                     <p class="research-description">${research.description}</p>
                     <div class="research-links">
-                        <a href="${research.links.github}" class="research-link github-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="${research.links.publication}" class="research-link publication-link">
-                            <i class="fas fa-file-alt"></i> Publication
-                        </a>
-                        <a href="${research.links.arxiv}" class="research-link arxiv-link">
-                            <i class="fas fa-external-link-alt"></i> arXiv
-                        </a>
+                        ${generateResearchLinks(research.links)}
                     </div>
                 </div>
                 `;

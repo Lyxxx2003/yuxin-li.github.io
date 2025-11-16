@@ -3,62 +3,60 @@
     {
       "id": "humor-project",
       "title": "Humor Project",
-      "type": "iOS Application",
-      "description": "An innovative iOS application designed to bring joy and laughter to users' daily lives. Features a curated collection of humor content, interactive elements, and social sharing capabilities. Built with modern iOS development practices and user-centered design principles.",
-      "image": "images/humor-project.jpg",
-      "skills": ["Swift", "UIKit", "Core Data", "REST APIs", "Xcode"],
+      "date": "2025 Fall",
+      "type": "Web & iOS Application",
+      "description": "An innovative web application designed to bring joy and laughter to users' daily lives. Use AI-generated humor captions to create and share funny images with friends.",
+      "image": "images/humor-project.png",
+      "skills": ["JavaScript", "React", "REST APIs", "Node.js", "SwiftUI"],
       "links": {
-        "github": "#",
-        "demo": "#"
+        "Try on iOS on TestFlight": "https://testflight.apple.com/join/ZsTcdrRF",
+        "Try on Web": "https://crackd.ai.com"
       }
     },
     {
       "id": "quizzbee",
       "title": "QuizzBee",
+      "date": "2024 Fall",
       "type": "iOS Application", 
-      "description": "An engaging quiz application for iOS that challenges users with various categories of questions. Features include real-time scoring, multiple difficulty levels, progress tracking, and social leaderboards. Designed with an intuitive interface for seamless user experience.",
-      "image": "images/quizzbee.jpg",
-      "skills": ["Swift", "SwiftUI", "Firebase", "Game Center", "JSON APIs"],
-      "links": {
-        "github": "#",
-        "demo": "#"
-      }
+      "description": "An engaging quiz application for iOS that challenges users with various categories of questions.",
+      "image": "images/quizzbee.png",
+      "skills": ["Swift", "SwiftUI", "Firebase", "ElevenLabs API"],
+      "links": {}
     },
     {
       "id": "cafecraft",
       "title": "CafeCraft",
+      "date": "2025 Spring",
       "type": "Web Application",
-      "description": "A comprehensive web platform for coffee enthusiasts and cafe owners. Features include cafe discovery, coffee bean information, brewing guides, and community reviews. Built with modern web technologies and responsive design for optimal experience across all devices.",
-      "image": "images/cafecraft.jpg", 
-      "skills": ["React", "Node.js", "MongoDB", "Express.js", "CSS3"],
+      "description": "A comprehensive web platform for coffee lovers to learn the ingredients of different types of coffee products.",
+      "image": "images/cafecraft.png", 
+      "skills": ["HTML", "CSS", "JavaScript"],
       "links": {
-        "github": "#",
-        "demo": "#"
+        "demo": "https://youtu.be/mgMyOe0KCWI?si=SMSQ-ybsruoB1pjN",
+        "github": "https://github.com/Lyxxx2003/s25-uid-project"
       }
     },
     {
       "id": "gardening-app",
       "title": "Gardening App",
+      "date": "2024 Spring",
       "type": "Web Application",
-      "description": "A digital gardening companion that helps users plan, track, and maintain their gardens. Features plant care reminders, seasonal planting guides, weather integration, and a community forum for sharing gardening tips and experiences.",
-      "image": "images/gardening-app.jpg",
-      "skills": ["JavaScript", "HTML5", "CSS3", "Weather API", "Local Storage"],
+      "description": "A digital gardening companion that helps users plan, track, and maintain their gardens.",
+      "image": "images/gardening-app.png",
+      "skills": ["Firebase", "React", "Node.js"],
       "links": {
-        "github": "#",
-        "demo": "#"
+        "github": "https://github.com/Lyxxx2003/Gardening-App"
       }
     },
     {
       "id": "eventrecommender",
       "title": "EventRecommender", 
+      "date": "2024 Fall",
       "type": "Web Application",
-      "description": "An intelligent event discovery platform that recommends personalized events based on user preferences, location, and past attendance history. Features machine learning algorithms for smart recommendations and integration with popular event platforms.",
-      "image": "images/eventrecommender.jpg",
-      "skills": ["Python", "Flask", "Machine Learning", "PostgreSQL", "RESTful APIs"],
-      "links": {
-        "github": "#",
-        "demo": "#"
-      }
+      "description": "An intelligent event discovery platform that recommends personalized events based on user preferences, location, and past attendance history.",
+      "image": "images/eventrecommender.png",
+      "skills": ["Java", "REST APIs", "Machine Learning", "MySQL", "MAMP", "HTML", "CSS", "JavaScript"],
+      "links": {}
     }
   ]
 }

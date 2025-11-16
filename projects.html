@@ -20,9 +20,56 @@ title: Projects
             const data = await response.json();
             const projectsContainer = document.getElementById('projects-content');
 
-            data.projects.forEach((project, index) => {
+            // Sort projects by date (newest first)
+            const sortedProjects = data.projects.sort((a, b) => {
+                // Extract year from date string (e.g., "2025 Fall" -> 2025)
+                const yearA = parseInt(a.date.match(/\d{4}/)?.[0] || '0');
+                const yearB = parseInt(b.date.match(/\d{4}/)?.[0] || '0');
+
+                if (yearA !== yearB) {
+                    return yearB - yearA; // Newest year first
+                }
+
+                // If same year, prioritize Fall > Spring
+                const seasonA = a.date.toLowerCase().includes('fall') ? 1 : 0;
+                const seasonB = b.date.toLowerCase().includes('fall') ? 1 : 0;
+                return seasonB - seasonA;
+            });
+
+            sortedProjects.forEach((project, index) => {
                 const projectRow = document.createElement('div');
                 projectRow.className = 'project-row';
+
+                // Generate dynamic links
+                let linksHtml = '';
+                if (project.links && Object.keys(project.links).length > 0) {
+                    Object.entries(project.links).forEach(([linkText, url]) => {
+                        if (url && url !== '' && url !== 'TBD') {
+                            // Determine icon based on link text
+                            let icon = 'fas fa-external-link-alt'; // default icon
+                            let linkClass = 'project-link general-link';
+
+                            if (linkText.toLowerCase().includes('github')) {
+                                icon = 'fab fa-github';
+                                linkClass = 'project-link github-link';
+                            } else if (linkText.toLowerCase().includes('demo') || linkText.toLowerCase().includes('live')) {
+                                icon = 'fas fa-external-link-alt';
+                                linkClass = 'project-link demo-link';
+                            } else if (linkText.toLowerCase().includes('video') || linkText.toLowerCase().includes('youtube')) {
+                                icon = 'fab fa-youtube';
+                                linkClass = 'project-link video-link';
+                            } else if (linkText.toLowerCase().includes('ios') || linkText.toLowerCase().includes('testflight')) {
+                                icon = 'fab fa-apple';
+                                linkClass = 'project-link ios-link';
+                            } else if (linkText.toLowerCase().includes('web') || linkText.toLowerCase().includes('try')) {
+                                icon = 'fas fa-globe';
+                                linkClass = 'project-link web-link';
+                            }
+
+                            linksHtml += `<a href="${url}" class="${linkClass}" target="_blank"><i class="${icon}"></i> ${linkText}</a>`;
+                        }
+                    });
+                }
 
                 projectRow.innerHTML = `
                 <div class="project-image">
@@ -31,18 +78,16 @@ title: Projects
                 </div>
                 <div class="project-content">
                     <h2>${project.title}</h2>
-                    <p class="project-type">${project.type}</p>
+                    <div class="project-meta">
+                        <span class="project-date">${project.date}</span>
+                        <span class="project-type">${project.type}</span>
+                    </div>
                     <p class="project-description">${project.description}</p>
                     <div class="project-skills">
                         ${project.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
                     </div>
                     <div class="project-links">
-                        <a href="${project.links.github}" class="project-link github-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <a href="${project.links.demo}" class="project-link demo-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
+                        ${linksHtml}
                     </div>
                 </div>
                 `;
