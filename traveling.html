@@ -11,4 +11,49 @@ title: Traveling
     <div class="map-container">
         <img src="images/map.png" alt="World Map of Places I've Visited" class="world-map">
     </div>
+
+    <div class="travel-cards-container">
+        <div id="travel-cards-content">
+            <!-- Travel cards will be loaded here dynamically -->
+        </div>
+    </div>
 </div>
+
+<script>
+    async function loadTravelDestinations() {
+        try {
+            const response = await fetch('data/traveling.json');
+            const data = await response.json();
+            const cardsContainer = document.getElementById('travel-cards-content');
+
+            data.destinations.forEach((destination, index) => {
+                const card = document.createElement('div');
+                card.className = 'travel-card';
+
+                card.innerHTML = `
+                <div class="travel-card-image">
+                    <img src="${destination.image}" alt="${destination.name}" 
+                         onerror="this.src='images/profile-photo.pic.jpg'">
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">${destination.name}</h3>
+                    <div class="travel-card-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>${destination.address}</span>
+                    </div>
+                    <p class="travel-card-description">${destination.description}</p>
+                </div>
+                `;
+
+                cardsContainer.appendChild(card);
+            });
+        } catch (error) {
+            console.error('Error loading travel destinations:', error);
+            document.getElementById('travel-cards-content').innerHTML =
+                '<p class="error-message">Error loading travel destinations. Please try again later.</p>';
+        }
+    }
+
+    // Load travel destinations when the page loads
+    document.addEventListener('DOMContentLoaded', loadTravelDestinations);
+</script>
