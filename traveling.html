@@ -30,12 +30,17 @@ title: Traveling
                 const card = document.createElement('div');
                 card.className = 'travel-card';
 
+                // Check if image exists and is not empty
+                const hasImage = destination.image && destination.image.trim() !== '';
+
                 card.innerHTML = `
+                ${hasImage ? `
                 <div class="travel-card-image">
                     <img src="${destination.image}" alt="${destination.name}" 
-                         onerror="this.src='images/profile-photo.pic.jpg'">
+                         onerror="this.parentElement.style.display='none'">
                 </div>
-                <div class="travel-card-content">
+                ` : ''}
+                <div class="travel-card-content ${!hasImage ? 'no-image' : ''}">
                     <h3 class="travel-card-title">${destination.name}</h3>
                     <div class="travel-card-address">
                         <i class="fas fa-map-marker-alt"></i>

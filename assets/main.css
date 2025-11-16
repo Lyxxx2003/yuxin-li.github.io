@@ -687,9 +687,8 @@ footer p {
     padding: 1rem;
     max-width: 1400px;
     margin: 0 auto;
-    height: calc(100vh - 200px); /* Account for header and nav */
-    display: flex;
-    flex-direction: column;
+    min-height: calc(100vh - 200px); /* Account for header and nav */
+    display: block; /* Changed from flex to block for proper flow */
 }
 
 .traveling-header {
@@ -711,11 +710,11 @@ footer p {
 }
 
 .map-container {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 0; /* Important for flex child to shrink */
+    margin-bottom: 2rem;
+    min-height: 400px; /* Give the map a reasonable minimum height */
 }
 
 .world-map {
@@ -783,6 +782,10 @@ footer p {
     padding: 1.25rem;
 }
 
+.travel-card-content.no-image {
+    padding: 2rem 1.25rem;
+}
+
 .travel-card-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -824,8 +827,12 @@ footer p {
 @media (max-width: 768px) {
     .traveling-container {
         padding: 0.5rem;
-        height: auto;
         min-height: calc(100vh - 180px);
+    }
+    
+    .map-container {
+        min-height: 250px;
+        margin-bottom: 1.5rem;
     }
     
     .traveling-header h1 {
