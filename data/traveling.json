@@ -1,46 +1,74 @@
 {
   "destinations": [
     {
-      "id": "tokyo-japan",
-      "name": "Tokyo, Japan",
-      "address": "Tokyo, Japan",
+      "id": "spain",
+      "name": "Barcelona, Spain",
+      "address": "Barcelona, Spain",
       "image": "",
-      "description": "The bustling capital city of Japan with amazing food, culture, and technology."
+      "description": "Great food! and visited Antoni Gaudí's architecture."
     },
     {
-      "id": "paris-france",
-      "name": "Paris, France", 
-      "address": "Paris, France",
+      "id": "uk",
+      "name": "Oxford, UK",
+      "address": "Oxford, United Kingdom",
       "image": "",
-      "description": "The city of lights, known for its art, fashion, and romantic atmosphere."
+      "description": "Spent a summer for NLP and ML at University of Oxford."
     },
     {
       "id": "new-york-usa",
       "name": "New York City, USA",
       "address": "New York, NY, USA",
       "image": "",
-      "description": "The city that never sleeps, featuring iconic landmarks and diverse culture."
+      "description": "Columbia University!"
     },
     {
-      "id": "london-uk",
-      "name": "London, UK",
-      "address": "London, United Kingdom",
+      "id": "urbana-illinois-usa",
+      "name": "Urbana, Illinois, USA",
+      "address": "Urbana, IL, USA",
       "image": "",
-      "description": "Historic city with royal palaces, museums, and traditional pubs."
+      "description": "University of Illinois at Urbana-Champaign!"
     },
     {
-      "id": "rome-italy",
-      "name": "Rome, Italy",
-      "address": "Rome, Italy",
+      "id": "italy",
+      "name": "Milano, Italy",
+      "address": "Milano, Italy",
       "image": "",
-      "description": "The eternal city with ancient ruins, Vatican City, and incredible cuisine."
+      "description": "Amazing churches."
     },
     {
-      "id": "sydney-australia",
-      "name": "Sydney, Australia",
-      "address": "Sydney, NSW, Australia",
+      "id": "switzerland",
+      "name": "Zurich, Switzerland",
+      "address": "Zurich, Switzerland",
       "image": "",
-      "description": "Beautiful harbor city with the famous Opera House and stunning beaches."
+      "description": "Beautiful scenery! And stayed with a local family."
+    },
+    {
+      "id": "netherlands",
+      "name": "Amsterdam, Netherlands",
+      "address": "Amsterdam, Netherlands",
+      "image": "",
+      "description": "Tulips! And stayed with a local family."
+    },
+    {
+      "id": "mexico",
+      "name": "Cancun, Mexico",
+      "address": "Cancun, Mexico",
+      "image": "",
+      "description": "Recommend Tulum!"
+    },
+    {
+      "id": "thailand",
+      "name": "Bangkok, Thailand",
+      "address": "Bangkok, Thailand",
+      "image": "",
+      "description": "Great great fruits!"
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "address": "Singapore",
+      "image": "",
+      "description": "Clean and green city!"
     }
   ]
 }
