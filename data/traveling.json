@@ -2,30 +2,30 @@
   "destinations": [
     {
       "id": "spain",
-      "name": "Barcelona, Spain",
-      "address": "Barcelona, Spain",
-      "image": "",
-      "description": "Great food! and visited Antoni Gaudí's architecture."
+      "name": "Madrid, Spain",
+      "address": "Madrid, Spain",
+      "image": "images/madrid.jpg",
+      "description": "Great food! (porras)"
     },
     {
       "id": "uk",
       "name": "Oxford, UK",
       "address": "Oxford, United Kingdom",
-      "image": "",
+      "image": "images/oxford.jpg",
       "description": "Spent a summer for NLP and ML at University of Oxford."
     },
     {
       "id": "new-york-usa",
       "name": "New York City, USA",
       "address": "New York, NY, USA",
-      "image": "",
+      "image": "images/columbia.jpg",
       "description": "Columbia University!"
     },
     {
       "id": "urbana-illinois-usa",
       "name": "Urbana, Illinois, USA",
       "address": "Urbana, IL, USA",
-      "image": "",
+      "image": "images/uiuc.jpg",
       "description": "University of Illinois at Urbana-Champaign!"
     },
     {
@@ -53,7 +53,7 @@
       "id": "mexico",
       "name": "Cancun, Mexico",
       "address": "Cancun, Mexico",
-      "image": "",
+      "image": "images/cancun.jpg",
       "description": "Recommend Tulum!"
     },
     {
@@ -69,6 +69,20 @@
       "address": "Singapore",
       "image": "",
       "description": "Clean and green city!"
+    },
+    {
+      "id": "beijing",
+      "name": "Beijing, China",
+      "address": "Beijing, China",
+      "image": "",
+      "description": "My home!"
+    },
+    {
+      "id": "boston",
+      "name": "Boston, USA",
+      "address": "Boston, MA, USA",
+      "image": "images/boston.jpg",
+      "description": "Lobster & sea"
     }
   ]
 }
